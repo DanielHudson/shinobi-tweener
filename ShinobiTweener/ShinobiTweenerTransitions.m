@@ -68,7 +68,7 @@
 	float b = tween.begin;
 	float c = tween.change;
 	
-	return c - [self bounceEaseOut:TweenPropertyMake(nil, 0, 0.0f, d-t, 0.0f, d, 0.0f, 0.0f, c, 0.0f, nil, nil, NO, NO)] + b;
+	return c - [self bounceEaseOut:TweenPropertyMake(nil, 0.0f, d-t, 0.0f, d, 0.0f, 0.0f, c, 0.0f, nil, nil, NO, NO)] + b;
 }
 
 + (float) bounceEaseOut:(TweenProperty)tween
@@ -98,9 +98,9 @@
 
 	if (t < d/2.0f)
 	{
-		return [self bounceEaseIn:TweenPropertyMake(nil, 0, 0.0f, t*2, 0.0f, d, 0.0f, 0.0f, c, 0, nil, nil, NO, NO)] * .5 + b;
+		return [self bounceEaseIn:TweenPropertyMake(nil, 0.0f, t*2, 0.0f, d, 0.0f, 0.0f, c, 0, nil, nil, NO, NO)] * .5 + b;
 	} else {
-		return [self bounceEaseOut:TweenPropertyMake(nil, 0, 0.0f, t*2-d, 0.0f, d, 0, 0.0f, c, 0.0f, nil, nil, NO, NO)] * .5 + c*.5 + b;
+		return [self bounceEaseOut:TweenPropertyMake(nil, 0.0f, t*2-d, 0.0f, d, 0, 0.0f, c, 0.0f, nil, nil, NO, NO)] * .5 + c*.5 + b;
 	}
 }
 

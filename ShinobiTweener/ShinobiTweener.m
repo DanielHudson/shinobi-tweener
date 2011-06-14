@@ -95,7 +95,7 @@ static ShinobiTweener *sharedInstance;
 {
 	float begin = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, nil, nil, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, nil, nil, NO, reversedPropertyIsSetAtStart);
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -103,7 +103,7 @@ static ShinobiTweener *sharedInstance;
 {
 	float begin = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, selector, nil, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, selector, nil, NO, reversedPropertyIsSetAtStart);
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -111,26 +111,26 @@ static ShinobiTweener *sharedInstance;
 {
 	float begin = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, selector, object, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, begin, finish, finish - begin, transition, selector, object, NO, reversedPropertyIsSetAtStart);
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
 #pragma mark AddTweenToFloat Delay
 - (void) addTweenToFloat:(float *)pointer finish:(float)finish timeDelay:(float)timeDelay timeDuration:(float)timeDuration transition:(uint)transition
 {
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, nil, nil, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, nil, nil, NO, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
 - (void) addTweenToFloat:(float *)pointer finish:(float)finish timeDelay:(float)timeDelay timeDuration:(float)timeDuration transition:(uint)transition onComplete:(SEL)selector
 {
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, selector, nil, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, selector, nil, NO, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
 - (void) addTweenToFloat:(float *)pointer finish:(float)finish timeDelay:(float)timeDelay timeDuration:(float)timeDuration transition:(uint)transition onComplete:(SEL)selector forObject:(id)object
 {
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, selector, object, NO, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, 0.0f, finish, 0.0f, transition, selector, object, NO, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -139,7 +139,7 @@ static ShinobiTweener *sharedInstance;
 {
 	float finish = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, nil, nil, YES, reversedPropertyIsSetAtStart);	
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, nil, nil, YES, reversedPropertyIsSetAtStart);	
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -147,7 +147,7 @@ static ShinobiTweener *sharedInstance;
 {
 	float finish = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, selector, nil, YES, reversedPropertyIsSetAtStart);	
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, selector, nil, YES, reversedPropertyIsSetAtStart);	
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -155,7 +155,7 @@ static ShinobiTweener *sharedInstance;
 {
 	float finish = *pointer;
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, selector, object, YES, reversedPropertyIsSetAtStart);	
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, 0.0f, timeDuration, start, finish, finish - start, transition, selector, object, YES, reversedPropertyIsSetAtStart);	
 	[tweenList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -170,7 +170,7 @@ static ShinobiTweener *sharedInstance;
 		*pointer = start;
 	}
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, nil, nil, YES, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, nil, nil, YES, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -184,7 +184,7 @@ static ShinobiTweener *sharedInstance;
 		*pointer = start;
 	}
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, selector, nil, YES, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, selector, nil, YES, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
@@ -198,7 +198,7 @@ static ShinobiTweener *sharedInstance;
 		*pointer = start;
 	}
 	
-	TweenProperty tween = TweenPropertyMake(pointer, TWEENER_PROPERTY, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, selector, object, YES, reversedPropertyIsSetAtStart);
+	TweenProperty tween = TweenPropertyMake(pointer, [[NSDate date] timeIntervalSince1970], 0.0f, timeDelay, timeDuration, start, finish, 0.0f, transition, selector, object, YES, reversedPropertyIsSetAtStart);
 	[delayList addObject:[NSValue valueWithBytes:&tween objCType:@encode(TweenProperty)]];
 }
 
